@@ -92,7 +92,3 @@ It is designed for passionate riders who want performance, reliability, and a se
 - Encrypted Password Storage
 - Form Validation
 - Secure Payment Flow
-
-
-php artisan migrate
-php artisan serve
