@@ -167,9 +167,55 @@
 
 
 <!-- FOOTER -->
-<footer class="footer text-center py-3" style="width:100%; margin-top:auto;">
-    © {{ date('Y') }} Rider's Den. All rights reserved.
+<!-- FOOTER -->
+{{-- <!-- FOOTER -->
+<!-- FOOTER -->
+<footer class="footer py-3"
+        style="width:100%; margin-top:auto; background:#000; border-top:1px solid #e53935;">
+
+    <div class="container-fluid position-relative text-center">
+
+        <!-- CENTER COPYRIGHT -->
+        <div style="color:#ffffff; font-size:14px;">
+            © {{ date('Y') }} Rider's Den. All rights reserved.
+        </div>
+
+        <!-- RIGHT SIDE DESIGN CREDIT -->
+        <div class="d-none d-md-block"
+             style="position:absolute; right:20px; top:50%; transform:translateY(-50%); font-size:14px;">
+            <span style="color:#ffffff;">Designed & Developed by</span>
+            <span style="color:#e53935; font-weight:1000; font-size:20px;">Rider Harshan</span>
+        </div>
+
+        <!-- MOBILE DESIGN CREDIT (below copyright) -->
+        <div class="d-md-none mt-2" style="font-size:14px;">
+            <span style="color:#ffffff;">Designed & Developed by</span>
+            <span style="color:#e53935; font-weight:1000;font-size:20px;">Rider Harshan</span>
+        </div>
+
+    </div>
+
+</footer> --}}
+
+<!-- FOOTER -->
+<footer class="footer py-3"
+        style="width:100%; margin-top:auto; background:#000; border-top:0px solid #e53935;">
+
+    <div class="container-fluid text-center">
+
+        <div style="font-size:10px;">
+            <span style="color:#ffffff;">Designed & Developed by</span>
+            <span style="color:#ff312d; font-weight:1000; font-size:20px;">
+                Rider Harshan
+            </span>
+        </div>
+
+    </div>
+
 </footer>
+
+
+
 
 
 <style>
