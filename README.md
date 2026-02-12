@@ -93,15 +93,6 @@ It is designed for passionate riders who want performance, reliability, and a se
 - Form Validation
 - Secure Payment Flow
 
----
 
-## 📦 Installation Guide
-
-```bash
-git clone https://github.com/Riderharshan/Final_Internship.git
-cd Bike-app
-composer install
-cp .env.example .env
-php artisan key:generate
 php artisan migrate
 php artisan serve
