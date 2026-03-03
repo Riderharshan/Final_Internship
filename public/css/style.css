@@ -6570,4 +6570,17 @@ body {
     padding-bottom: 20px;
 }
 
+/* For Chrome, Edge, Safari */
+body::-webkit-scrollbar {
+    display: none;
+}
 
+/* For Firefox */
+body {
+    scrollbar-width: none;
+}
+
+/* For IE */
+body {
+    -ms-overflow-style: none;
+}
