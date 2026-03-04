@@ -6569,7 +6569,6 @@ html, body {
 body {
     padding-bottom: 20px;
 }
-
 /* For Chrome, Edge, Safari */
 body::-webkit-scrollbar {
     display: none;
