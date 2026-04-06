@@ -21,6 +21,9 @@
 
     <!-- Main Styles -->
     <link rel="stylesheet" href="{{ asset('css/style.css') }}">
+
+    <!-- Page-specific styles -->
+    @stack('styles')
 </head>
 <body>
 
@@ -379,6 +382,9 @@ setTimeout(() => {
     });
 }, 10000);
 </script>
+
+<!-- Page-specific scripts -->
+@stack('scripts')
 
 </body>
 </html>

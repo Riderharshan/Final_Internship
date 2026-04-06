@@ -1,0 +1,528 @@
+/* =============================================
+   MY ORDERS PAGE – review.css
+   Design: Card-based, Dark/Red theme
+   Updated: Professional responsive redesign
+============================================= */
+
+/* ─────────────────────────────
+   PAGE CONTAINER
+───────────────────────────── */
+.orders-page-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 20px 60px;
+}
+
+/* ─────────────────────────────
+   PAGE HEADER
+───────────────────────────── */
+.orders-page-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.orders-page-header .page-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: red;
+    margin: 0;
+}
+
+.orders-back-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 7px;
+    padding: 8px 18px;
+    background: #111;
+    color: #fff;
+    border: 1px solid red;
+    border-radius: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.25s, color 0.25s;
+}
+
+.orders-back-btn:hover {
+    background: red;
+    color: #000;
+    text-decoration: none;
+}
+
+/* ─────────────────────────────
+   ALERTS
+───────────────────────────── */
+.orders-alert {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px 18px;
+    border-radius: 10px;
+    margin-bottom: 22px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.orders-alert--success {
+    background: rgba(46, 204, 113, 0.1);
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+}
+
+/* ─────────────────────────────
+   ORDERS LIST
+───────────────────────────── */
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* ─────────────────────────────
+   ORDER CARD
+───────────────────────────── */
+.order-card {
+    background: #111;
+    border: 1px solid rgba(255, 0, 0, 0.5);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow:
+        0 0 28px rgba(255, 0, 0, 0.12),
+        0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s;
+}
+
+.order-card:hover {
+    box-shadow:
+        0 0 40px rgba(255, 0, 0, 0.22),
+        0 4px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* ─────────────────────────────
+   ORDER CARD HEADER BAR
+───────────────────────────── */
+.order-card__header {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    background: #0a0a0a;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.25);
+    padding: 14px 22px;
+    flex-wrap: wrap;
+    gap: 8px 20px;
+}
+
+.order-card__meta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    min-width: 80px;
+}
+
+.order-card__label {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: rgba(255, 0, 0, 0.75);
+}
+
+.order-card__value {
+    font-size: 14px;
+    font-weight: 600;
+    color: #f0f0f0;
+}
+
+.order-card__total {
+    color: #fff;
+    font-size: 15px;
+}
+
+/* PAID BADGE */
+.badge-paid {
+    display: inline-block;
+    padding: 3px 10px;
+    border-radius: 20px;
+    background: rgba(46, 204, 113, 0.12);
+    border: 1px solid #2ecc71;
+    color: #2ecc71;
+    font-size: 10px;
+    font-weight: 800;
+    letter-spacing: 0.8px;
+    text-transform: uppercase;
+    margin-top: 2px;
+}
+
+/* ACTIONS GROUP */
+.order-card__actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-left: auto;
+    flex-wrap: wrap;
+}
+
+.order-action-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 8px;
+    background: red;
+    color: #000;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, transform 0.15s;
+    flex-shrink: 0;
+}
+
+.order-action-btn:hover {
+    background: #fff;
+    color: #000;
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+.order-action-btn--outline {
+    background: transparent;
+    color: red;
+    border: 1px solid red;
+}
+
+.order-action-btn--outline:hover {
+    background: red;
+    color: #000;
+}
+
+/* ─────────────────────────────
+   ORDER CARD BODY
+───────────────────────────── */
+.order-card__body {
+    padding: 0;
+}
+
+/* ─────────────────────────────
+   ORDER ITEM ROW
+───────────────────────────── */
+.order-item {
+    display: flex;
+    gap: 18px;
+    align-items: flex-start;
+    padding: 20px 22px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+}
+
+.order-item:last-child {
+    border-bottom: none;
+}
+
+/* Product Image */
+.order-item__img-wrap {
+    flex-shrink: 0;
+    width: 64px;
+    height: 64px;
+    background: #000;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.order-item__img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 6px;
+}
+
+/* Product Info */
+.order-item__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.order-item__name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #f0f0f0;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+
+/* ─────────────────────────────
+   REVIEW BLOCK (general)
+───────────────────────────── */
+.review-block {
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(255, 0, 0, 0.2);
+    border-radius: 10px;
+    padding: 16px;
+    margin-top: 4px;
+}
+
+.review-block__heading {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.6px;
+    color: rgba(255, 0, 0, 0.8);
+    margin: 0 0 10px 0;
+}
+
+.review-block__text {
+    font-size: 14px;
+    color: #ccc;
+    margin: 8px 0 10px;
+    line-height: 1.6;
+}
+
+.review-block__image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(255, 0, 0, 0.4);
+    margin-bottom: 12px;
+    display: block;
+}
+
+/* ─────────────────────────────
+   REVIEW STARS
+───────────────────────────── */
+.review-stars span {
+    font-size: 22px;
+    line-height: 1;
+    cursor: default;
+    display: inline-block;
+}
+
+.review-stars--display .star--filled {
+    color: #FFD700;
+}
+
+.review-stars--display .star--empty {
+    color: rgba(255, 255, 255, 0.2);
+}
+
+.review-stars--interactive span {
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.2);
+    transition: color 0.15s, transform 0.15s;
+}
+
+.review-stars--interactive span:hover,
+.review-stars--interactive span.selected {
+    color: #FFD700;
+    transform: scale(1.2);
+}
+
+/* ─────────────────────────────
+   REVIEW ACTIONS (edit/delete)
+───────────────────────────── */
+.review-block__actions {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+
+/* ─────────────────────────────
+   REVIEW FORM
+───────────────────────────── */
+.review-block--form form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.review-textarea {
+    width: 100%;
+    background: #000 !important;
+    border: 1px solid rgba(255, 0, 0, 0.5) !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    font-size: 13px;
+    padding: 10px 12px;
+    resize: vertical;
+    min-height: 78px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+    box-sizing: border-box;
+}
+
+.review-textarea:focus {
+    border-color: red !important;
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.35) !important;
+}
+
+/* Custom file input */
+.review-file-wrap {
+    width: 100%;
+}
+
+.review-file-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    background: #000;
+    border: 1px dashed rgba(255, 0, 0, 0.45);
+    border-radius: 8px;
+    color: #aaa;
+    font-size: 12px;
+    cursor: pointer;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.review-file-label:hover {
+    border-color: red;
+    color: #fff;
+}
+
+.review-file-label input[type="file"] {
+    display: none;
+}
+
+/* ─────────────────────────────
+   SHARED BUTTON STYLES
+───────────────────────────── */
+.order-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 8px 16px;
+    background: red;
+    color: #000;
+    font-size: 13px;
+    font-weight: 700;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+.order-btn:hover {
+    background: #fff;
+    color: #000;
+    text-decoration: none;
+    box-shadow: 0 0 14px rgba(255, 255, 255, 0.3);
+}
+
+.order-btn--sm {
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+}
+
+.order-btn--outline {
+    background: transparent;
+    color: red;
+    border: 1px solid red;
+}
+
+.order-btn--outline:hover {
+    background: red;
+    color: #000;
+}
+
+.order-btn--submit {
+    align-self: flex-start;
+}
+
+/* ─────────────────────────────
+   EMPTY STATE
+───────────────────────────── */
+.orders-empty {
+    text-align: center;
+    padding: 60px 20px;
+    background: #111;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 14px;
+}
+
+.orders-empty__icon {
+    font-size: 56px;
+    color: rgba(255, 0, 0, 0.3);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.orders-empty p {
+    color: #aaa;
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+
+/* ─────────────────────────────
+   REVEAL ANIMATION
+───────────────────────────── */
+.reveal {
+    opacity: 0;
+    transform: translateY(18px);
+    animation: ordersReveal 0.5s ease forwards;
+}
+.reveal.delay-1 { animation-delay: 0.05s; }
+.reveal.delay-2 { animation-delay: 0.15s; }
+
+@keyframes ordersReveal {
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* ─────────────────────────────
+   RESPONSIVE ≤ 640px
+───────────────────────────── */
+@media (max-width: 640px) {
+
+    .orders-page-container {
+        padding: 20px 14px 50px;
+    }
+
+    .order-card__header {
+        padding: 12px 16px;
+        gap: 10px 16px;
+    }
+
+    .order-card__actions {
+        margin-left: 0;
+        width: 100%;
+        justify-content: flex-start;
+        border-top: 1px solid rgba(255,255,255,0.06);
+        padding-top: 10px;
+        margin-top: 4px;
+    }
+
+    .order-item {
+        padding: 16px;
+        gap: 14px;
+    }
+
+    .order-item__img-wrap {
+        width: 52px;
+        height: 52px;
+    }
+
+    .review-block {
+        padding: 12px;
+    }
+
+    .review-stars span {
+        font-size: 26px;
+    }
+}
+
+@media (max-width: 400px) {
+    .order-card__meta {
+        min-width: 70px;
+    }
+}
